@@ -1,32 +1,33 @@
-# NASA TESS Exoplanet Transit Detection Pipeline
+# 🌌 AstroData: Automated TESS Exoplanet Discovery & 3D Blender Pipeline
 
-An automated data science pipeline in Python to query, clean, and analyze high-cadence space telescope photometry from NASA's Transiting Exoplanet Survey Satellite (TESS). 
-
-*(Note: This pipeline serves as the empirical data engine for my broader computational astrophysics workflow, feeding real stellar transit parameters directly into custom Blender simulation generators.)*
+An open-source, end-to-end research tool designed for astronomers, researchers, and students to automatically query space telescope data, compute exoplanet parameters, invert planetary masses via N-body simulations, and procedurally render 3D star systems in Blender.
 
 ---
 
-## What It Does
-Raw space telescope data contains massive instrumental noise, scattered light, and stellar variability. This pipeline automates the process of pulling Target Pixel Files (TPFs) from NASA's MAST archive, detrending the light curves, and running Box Least Squares (BLS) periodogram analysis to detect periodic flux dips caused by exoplanet transits.
+## 🚀 Features
+- **Light Curve Processing:** Pulls photometric data directly from the NASA MAST archive (`Lightkurve`)[cite: 1].
+- **Periodogram Scanning:** Uses Box Least Squares (BLS) to detect exoplanet orbital periods and transit depths[cite: 1].
+- **N-Body Mass Inversion:** Simulates gravitational interactions using `REBOUND` to calculate Transit Timing Variations (TTVs) and infer planetary masses[cite: 1].
+- **Procedural 3D Generation:** Automatically streams parameters via JSON into a Python script in Blender to generate starfield backgrounds, turbulent host stars, orbital paths, and multi-planet systems.
 
-## Pipeline Workflow
-1. **Data Ingestion:** Queries the Mikulski Archive for Space Telescopes (MAST) using `lightkurve` to download FITS light curve files for target stars.
-2. **Systematic Detrending:** Applies sliding-window median filters and flat-field corrections to strip out instrumental jitter and stellar flare noise.
-3. **Periodogram Analysis:** Runs BLS across temporal frequency spectra to identify periodic flux drops matching the planet-to-star radius ratio relation:
-   - Fractional Flux Drop: (ΔF / F) ≈ (Rp / R_*)²
+---
 
-## Integration with Physical Simulations
-The output transit parameters extracted from this pipeline (such as orbital radii and flux attenuations) feed directly into my companion spatial rendering tools to procedurally generate 3D star system and gravitational lensing simulations.
+## 🛠️ Tech Stack
+- **Python** (Google Colab backend)
+- **Astropy / Lightkurve / REBOUND** (Astrophysics & N-body dynamics)
+- **Blender (Python API / Eevee Engine)** (3D procedural visualization)
 
-## Tech Stack
-* Python 3.x
-* `lightkurve`, `astropy` (NASA MAST API)
-* `numpy`, `scipy`, `pandas` (Time-series signal processing)
-* `matplotlib` (Phase-folded transit light curve plotting)
+---
 
-## Running Locally
-```bash
-git clone [https://github.com/silas1407/TESS-Exoplanet-Pipeline.git](https://github.com/silas1407/TESS-Exoplanet-Pipeline.git)
-cd TESS-Exoplanet-Pipeline
-pip install lightkurve astropy matplotlib scipy numpy pandas
-python tess_pipeline.py
+## 🏃‍♂️ Quickstart Guide
+
+### Step 1: Run the Colab Backend
+1. Open the notebook in [Google Colab](https://colab.research.google.com/drive/1wFFB4-Gl5_4k6tHq5yBrBwaHGqpp3i2_#notebook-main)[cite: 1].
+2. Enter your target star name (e.g., `Kepler-11`, `TRAPPIST-1`)[cite: 3].
+3. Run through the pipeline cells to process light curves[cite: 1] and export the system parameters JSON file.
+
+### Step 2: Render in Blender
+1. Open Blender and go to the **Scripting** tab.
+2. Load the `exoplanet_universal_renderer.py` script.
+3. Update the `json_filepath` variable to point to your downloaded system JSON file.
+4. Hit **Run Script** to instantly generate the star system!
