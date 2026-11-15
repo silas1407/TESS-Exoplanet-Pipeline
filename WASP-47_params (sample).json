@@ -1,0 +1,48 @@
+{
+    "system_name": "WASP-47",
+    "star_radius_rsun": 0.7699999999999999,
+    "planets": [
+        {
+            "name": "b",
+            "semi_major_axis_au": 0.1,
+            "period_days": 4.13,
+            "eccentricity": 0.02,
+            "radius_rearth": 11.41
+        },
+        {
+            "name": "c",
+            "semi_major_axis_au": 0.17,
+            "period_days": 4.96,
+            "eccentricity": 0.02,
+            "radius_rearth": 12.84
+        },
+        {
+            "name": "d",
+            "semi_major_axis_au": 0.24,
+            "period_days": 5.95,
+            "eccentricity": 0.02,
+            "radius_rearth": 14.26
+        },
+        {
+            "name": "e",
+            "semi_major_axis_au": 0.31,
+            "period_days": 7.14,
+            "eccentricity": 0.02,
+            "radius_rearth": 15.69
+        },
+        {
+            "name": "f",
+            "semi_major_axis_au": 0.38,
+            "period_days": 8.57,
+            "eccentricity": 0.02,
+            "radius_rearth": 17.12
+        },
+        {
+            "name": "g",
+            "semi_major_axis_au": 0.45,
+            "period_days": 10.29,
+            "eccentricity": 0.02,
+            "radius_rearth": 18.54
+        }
+    ]
+}
