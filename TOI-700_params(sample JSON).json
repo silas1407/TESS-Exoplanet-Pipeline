@@ -1,0 +1,48 @@
+{
+    "system_name": "TOI-700",
+    "star_radius_rsun": 0.7699999999999999,
+    "planets": [
+        {
+            "name": "b",
+            "semi_major_axis_au": 0.1,
+            "period_days": 27.14,
+            "eccentricity": 0.02,
+            "radius_rearth": 8.07
+        },
+        {
+            "name": "c",
+            "semi_major_axis_au": 0.17,
+            "period_days": 32.57,
+            "eccentricity": 0.02,
+            "radius_rearth": 9.07
+        },
+        {
+            "name": "d",
+            "semi_major_axis_au": 0.24,
+            "period_days": 39.08,
+            "eccentricity": 0.02,
+            "radius_rearth": 10.08
+        },
+        {
+            "name": "e",
+            "semi_major_axis_au": 0.31,
+            "period_days": 46.9,
+            "eccentricity": 0.02,
+            "radius_rearth": 11.09
+        },
+        {
+            "name": "f",
+            "semi_major_axis_au": 0.38,
+            "period_days": 56.28,
+            "eccentricity": 0.02,
+            "radius_rearth": 12.1
+        },
+        {
+            "name": "g",
+            "semi_major_axis_au": 0.45,
+            "period_days": 67.54,
+            "eccentricity": 0.02,
+            "radius_rearth": 13.11
+        }
+    ]
+}
