@@ -23,8 +23,9 @@ An open-source, end-to-end research tool designed for astronomers, researchers, 
 
 ### Step 1: Run the Colab Backend
 1. Open the notebook in [Google Colab](https://colab.research.google.com/drive/1wFFB4-Gl5_4k6tHq5yBrBwaHGqpp3i2_#notebook-main)[cite: 1].
-2. Enter your target star name (e.g., `Kepler-11`, `TRAPPIST-1`)[cite: 3].
-3. Run through the pipeline cells to process light curves[cite: 1] and export the system parameters JSON file.
+2. Press Run all
+3. Enter your target star name (e.g., `Kepler-11`, `TRAPPIST-1`)[cite: 3].(as of right now it is set to WASP-47 ,but, you can enter any star you wish)
+5. Run through the pipeline cells to process light curves[cite: 1] and export the system parameters JSON file.
 
 ### Step 2: Render in Blender
 1. Open Blender and go to the **Scripting** tab.
